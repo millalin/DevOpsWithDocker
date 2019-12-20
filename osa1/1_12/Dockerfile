@@ -3,10 +3,10 @@ RUN apt-get update && apt-get install -y curl
 RUN curl -sL https://deb.nodesource.com/setup_10.x | bash
 RUN apt install -y nodejs
 RUN apt install -y git
-RUN git clone https://github.com/docker-hy/backend-example-docker.git
-WORKDIR /backend-example-docker
+RUN git clone https://github.com/docker-hy/frontend-example-docker.git
+WORKDIR /frontend-example-docker
 RUN npm install
-EXPOSE 8000
-ENV FRONT_URL=http://localhost:5000
+EXPOSE 5000
+ENV API_URL=http://localhost:8000
 ENTRYPOINT ["npm"]
 CMD ["start"]
