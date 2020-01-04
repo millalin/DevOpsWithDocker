@@ -1,0 +1,12 @@
+version: '3'  
+
+services: 
+    front: 
+      image: app_frontend 
+      ports: 
+        - 5000:5000 
+    back:
+      image: app
+      ports:
+        - 8000:8000
+
